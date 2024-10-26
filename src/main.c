@@ -42,7 +42,7 @@ static const int screenHeight = 450;
 
 static RenderTexture2D target = {0}; // Render texture to render our game
 
-// TODO: Define global variables here, recommended to make them static
+static Texture2D rabbit;
 
 //----------------------------------------------------------------------------------
 // Module Functions Declaration
@@ -64,6 +64,12 @@ int main(void)
 
     // TODO: Load resources / Initialize variables at this point
 
+    SearchAndSetResourceDir("resources");
+    // LOG("Current working directory: %s\n", GetWorkingDirectory());
+    rabbit = LoadTexture("wabbit_alpha.png");
+    if (rabbit.id == 0) {
+        LOG("Failed to load texture: wabbit_alpha.png\n");
+    }
     // Render texture to draw full screen, enables screen scaling
     // NOTE: If screen is scaled, mouse input should be scaled proportionally
     target = LoadRenderTexture(screenWidth, screenHeight);
@@ -87,6 +93,7 @@ int main(void)
     UnloadRenderTexture(target);
 
     // TODO: Unload all loaded resources at this point
+    UnloadTexture(rabbit);
 
     CloseWindow(); // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
@@ -115,6 +122,8 @@ void UpdateDrawFrame(void)
         // TODO: Draw your game screen here
         DrawText("Welcome to raylib NEXT gamejam!", 150, 140, 30, BLACK);
         DrawRectangleLinesEx((Rectangle){0, 0, screenWidth, screenHeight}, 16, BLACK);
+        DrawTexture(rabbit,384, 209,WHITE);
+        DrawText("Look at that cute rabbit!", 200, 260, 30, BLACK);
 
     EndTextureMode();
 
