@@ -10,6 +10,7 @@
 	},
 	"makefile.makefilePath": "",
 	"files.associations": {
-		"resource_dir.h": "c"
+		"resource_dir.h": "c",
+		"raylib.h": "c"
 	}
 }
