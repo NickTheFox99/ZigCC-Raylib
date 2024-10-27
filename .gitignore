@@ -403,3 +403,4 @@ Makefile
 
 # Built web files
 build/web
+build/web.zip
