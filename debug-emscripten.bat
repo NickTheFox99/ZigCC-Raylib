@@ -1,0 +1,1 @@
+emcc -o ./bin/web/index.html -g ./src/main.c -I./include/raylib ./lib/raylib/libraylib.a -L. -L./lib/raylib/libraylib.a -I./include -s USE_GLFW=3 --shell-file ./resources/myshell.html --preload-file resources/ -Wall -DDEBUG -DPLATFORM_WEB

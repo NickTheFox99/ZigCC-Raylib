@@ -15,7 +15,7 @@
 // Simple log system to avoid printf() calls if required
 // NOTE: Avoiding those calls, also avoids const strings memory usage
 #define SUPPORT_LOG_INFO
-#if defined(SUPPORT_LOG_INFO)
+#ifdef DEBUG
 #define LOG(...) printf(__VA_ARGS__)
 #else
 #define LOG(...)
@@ -54,7 +54,7 @@ static void UpdateDrawFrame(void); // Update and Draw one frame
 //------------------------------------------------------------------------------------
 int main(void)
 {
-#if !defined(_DEBUG)
+#ifndef DEBUG
     SetTraceLogLevel(LOG_NONE); // Disable raylib trace log messages
 #endif
 
@@ -64,8 +64,8 @@ int main(void)
 
     // TODO: Load resources / Initialize variables at this point
 
-    SearchAndSetResourceDir("resources");
-    // LOG("Current working directory: %s\n", GetWorkingDirectory());
+    LOG("%i\n",(int)SearchAndSetResourceDir("resources"));
+    LOG("Current working directory: %s\n", GetWorkingDirectory());
     rabbit = LoadTexture("wabbit_alpha.png");
     if (rabbit.id == 0) {
         LOG("Failed to load texture: wabbit_alpha.png\n");
