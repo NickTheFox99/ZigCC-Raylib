@@ -64,7 +64,7 @@ int main(void)
 
     // TODO: Load resources / Initialize variables at this point
 
-    LOG("%i\n",(int)SearchAndSetResourceDir("resources"));
+    SearchAndSetResourceDir("resources");
     LOG("Current working directory: %s\n", GetWorkingDirectory());
     rabbit = LoadTexture("wabbit_alpha.png");
     if (rabbit.id == 0) {
