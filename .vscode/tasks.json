@@ -16,14 +16,15 @@
         "-g",
         "${file}",
         "-I",
-        "${workspaceFolder}/include/raylib-zig",
-        "${workspaceFolder}/lib/raylib-zig/raylib.lib",
+        "${workspaceFolder}/include/raylib",
+        "${workspaceFolder}/lib/raylib/raylib.lib",
         "-I",
         "${workspaceFolder}/include",
         "-lopengl32",
         "-lgdi32",
         "-lwinmm",
-        "-Ofast"
+        "-O3",
+        "-march=native"
       ]
     },
     {
@@ -41,8 +42,8 @@
         "-g",
         "${file}",
         "-I",
-        "${workspaceFolder}/include/raylib-zig",
-        "${workspaceFolder}/lib/raylib-zig/raylib.lib",
+        "${workspaceFolder}/include/raylib",
+        "${workspaceFolder}/lib/raylib/raylib.lib",
         "-I",
         "${workspaceFolder}/include",
         "-lopengl32",

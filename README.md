@@ -1,42 +1,11 @@
-## RaylibNEXTGame
+## Raylib Zig CC Template
 
-### Description
+This is a template I have modified for personal use, and found it to be useful and convenient, especially for cross-compiling.
+The reason I made this was because I was having lots of trouble attempting to find a template that works for Raylib, so I decided to make my own.
+It used raylib-gamejam-template to start, then it was built on to use Zig CC and Emscripten.
 
+### Usage
 
-
-### Features
-
- - $(Project Feature 01)
- - $(Project Feature 02)
- - $(Project Feature 03)
-
-### Controls
-
-Keyboard/Mouse:
- - $(project Control 01)
- - $(project Control 02)
- - $(project Control 03)
-
-### Screenshots
-
-_TODO: Show your game to the world, animated GIFs recommended!._
-
-### Developers
-
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
-
-### Links
-
- - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
-
-### License
-
-This project sources are licensed under an unmodified zlib/libpng license, which is an OSI-certified, BSD-like license that allows static linking with closed source software. Check [LICENSE](LICENSE) for further details.
-
-$(Additional Licenses)
-
-*Copyright (c) 2024  ($(User Twitter/GitHub Name))*
+This was built using VS Code, and is targeted to be used with VS Code. You need to install Zig, and build the Raylib source with Zig.
+Put the built .lib into lib/raylib, and test the compiling.
+Currently, the only way to build is using VS Code tasks (Debug Windows & Release Windows), and using the .bat for emscripten.

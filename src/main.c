@@ -60,7 +60,7 @@ int main(void)
 
     // Initialization
     //--------------------------------------------------------------------------------------
-    InitWindow(screenWidth, screenHeight, "raylib gamejam template");
+    InitWindow(screenWidth, screenHeight, "raylib template");
 
     // TODO: Load resources / Initialize variables at this point
 
@@ -120,7 +120,7 @@ void UpdateDrawFrame(void)
         ClearBackground(RAYWHITE);
 
         // TODO: Draw your game screen here
-        DrawText("Welcome to raylib NEXT gamejam!", 150, 140, 30, BLACK);
+        DrawText("Welcome to Raylib!", 250, 140, 30, BLACK);
         DrawRectangleLinesEx((Rectangle){0, 0, screenWidth, screenHeight}, 16, BLACK);
         DrawTexture(rabbit,384, 209,WHITE);
         DrawText("Look at that cute rabbit!", 200, 260, 30, BLACK);

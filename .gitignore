@@ -62,10 +62,7 @@ dkms.conf
 
 # Build folder
 [Bb]uild
-lib/raylib-zig
-include/raylib-zig
 lib/raylib
-include/raylib
 *.js
 *.data
 *.wasm
